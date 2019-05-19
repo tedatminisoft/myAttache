@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:telerikBusyIndicator="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives" xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="myAttache.Portable.Views.LoginPage">
+    <ContentPage.Content>
+        <telerikBusyIndicator:RadBusyIndicator x:Name="BusyIndicator"
+                                       AnimationContentHeightRequest="100"
+                                       AnimationContentWidthRequest="100"
+                                       IsBusy="False">
+    <telerikBusyIndicator:RadBusyIndicator.Content>
+                <StackLayout>
+<telerikInput:RadEntry x:Name="activationCodeEntry" WatermarkText="Enter activation code"/>
+            <telerikInput:RadEntry x:Name="userNameEntry" WatermarkText="Enter user name"/>
+<telerikInput:RadEntry x:Name="passwordEntry" IsPassword="True" WatermarkText="Enter Password"/>
+            <telerikInput:RadButton x:Name="button" 
+                        Text="Click me!"  
+                        BorderThickness="2" 
+                        BorderColor="#4488F6" 
+                        Clicked="OnButtonClicked"/>
+        </StackLayout>
+                   </telerikBusyIndicator:RadBusyIndicator.Content>
+            </telerikBusyIndicator:RadBusyIndicator>
+    </ContentPage.Content>
+</ContentPage>
